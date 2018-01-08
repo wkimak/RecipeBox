@@ -1,0 +1,577 @@
+
+
+*{
+	box-sizing: border-box;
+}
+
+html{
+	position: relative;
+	height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* ----------------- Navbar ----------------- */
+.navBar{
+	height: 80px;
+	width: 100%;
+}
+
+.navBar p, .navBar i{
+	display: inline-block;
+	font-size: 22px;
+}
+
+.navBar p{
+	margin-left: 50px;
+	margin-top: 30px;
+	font-size: 48px;
+	font-family: 'Tangerine', cursive;
+}
+
+/* Add Recipe Button */
+.addRecipe{
+	float: right;
+	color: rgb(153, 255,204);
+	margin-right: 50px;
+	border-radius: 100%;
+	text-align: center;
+	padding-top: 15px;
+	cursor: pointer;
+}
+
+
+/* ------------------------- Main Recipe Boxes ------------------------- */
+
+#root, .mainContainer{
+	height: 100%;
+}
+
+/* Parent container for display: flex */
+.flex-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	min-height: 80%;
+	max-width: 100%;
+	align-items: center;
+	font-family: 'Enriqueta', serif;
+	padding-bottom: 75px;
+}
+
+/* Individual Recipe containers */
+.recipe-container{
+	height: 350px;
+	width: 300px;
+	margin-top: 35px;
+	background-color: white;
+	box-shadow: 2px 2px 10px black;
+	text-align: center;
+	overflow: hidden;
+}
+
+.recipe-container img{
+	width: 100%;
+	height: 60%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.viewIngredientsBtn{
+	border: 1px solid rgb(153, 255,204);
+	background-color: rgba(153, 255,204,0.1);
+	height: 30px;
+	width: 150px;
+	font-family: 'Enriqueta', serif;
+	cursor: pointer;
+}
+
+/* ------------------------- Add Recipe Form ----------------------- */
+
+/* Main title */
+ .addRecipeTitle{
+	text-align: center;
+	margin-bottom: 35px;
+	font-family: 'Tangerine', cursive;
+}
+
+/* Flex container for "choose picture" and form */
+.addRecipe-flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+/* container */
+.addRecipe-form{
+	padding: 10px 30px;
+	background-color: rgba(138,139,140,0.8);
+	height: 475px;
+	margin-bottom: 50px;
+}
+
+.choosePhoto-container{
+	height: 475px;
+	background-color: grey;
+}
+
+
+/* Insert Title Input */
+.addRecipe-form input{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	border: 4px solid rgb(153, 255,204);
+	border-radius: 10px;
+}
+
+/* Insert Ingrediants Textarea */
+.addRecipe-form textArea{
+	display: block;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 4px solid rgb(153, 255,204);
+	border-radius: 10px;
+}
+
+
+/* Individual Buttons */
+.submitRecipeBtn{
+	height: 50px;
+	width: 50px;
+	color: rgb(153, 255,204);
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 35px;
+	cursor: pointer;
+}
+
+/* Go Back to Recipes Button */
+.backBtn{
+	color: rgb(153, 255,204);
+	position: absolute;
+	top:  20px;
+	left: 40px;
+	cursor: pointer;
+}
+
+/* Exit Photo Gallery */
+.exitBtn{
+	height: 40px;
+	width: 100px;
+	background-color: orange;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border: 1px solid white;
+	font-family: 'Enriqueta', serif;
+	cursor: pointer;
+}
+
+/* Choose Photo Button */
+.choosePhotoBtn{
+	border: 1px solid white;
+	position: relative;
+	top: 50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: orange;
+	font-family: 'Enriqueta', serif;
+	cursor: pointer;
+}
+
+/* Choose Photo display image container */
+.displayImage{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+
+
+/* ---------------- Photo gallery ------------- */
+
+.photos-container{
+	width: 100%;
+	min-height: 100%;
+	margin: auto;
+	background-color: rgba(0,0,0,0.9);
+	padding-bottom: 50px;
+	position: absolute;
+	top: 0;
+}
+
+
+/* Photo list */
+.photos-ul{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+.photos-ul img{
+	margin-top: -10px;
+	height: 200px;
+	width: 250px;
+}
+
+.photosInput{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	height: 40px;
+	width: 300px;
+	border: 1px solid orange;
+	border-radius: 10px;
+}
+
+
+
+
+/* --------------------- Ingrediants styling -------------------- */
+
+/* Main Container */
+.ingredients-container{
+	padding-top: 10px;
+	width: 650px;
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	border: 1px solid orange;
+	border-radius: 10px;
+}
+
+/* Main Title */
+.ingredients-container h1{
+	text-align: center;
+	font-size: 42px;
+    font-family: 'Tangerine', cursive;
+}
+
+/* ul element */
+.ingredients-list{
+	line-height: 20px;
+	display: block;
+	margin-left: -38px;
+	margin-bottom: 50px;
+	font-family: 'Enriqueta', serif;
+	position: relative;
+}
+
+/* Ingredients Buttons */
+.deleteBtn, .editBtn{
+	height: 50px;
+	width: 150px;
+	color: white;
+	font-family: 'Enriqueta', serif;
+	cursor: pointer;
+	margin-bottom: 50px;
+}
+
+.deleteBtn{
+	background-color: darkred;
+}
+
+.backBtn-ingredients{
+	position: absolute;
+	top:  20px;
+	left: 40px;
+    color: orange;
+    cursor: pointer;
+}
+
+.editBtn {
+	background-color: black;
+	color: white;
+}
+
+/* Buttons Container */
+.ingredients-btns-container{
+	text-align: center;
+	position: relative;
+	top: 10px;
+}
+
+/* Individual ingredient items */
+.ingredientItem{
+	margin-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(255,171,85,0.1);
+	padding: 10px 20px 10px 50px;
+	
+}
+
+/* Input to edit Ingredients */
+.editRecipeForm input{
+	height: 50px;
+	width: 90%;
+	margin-top: 10px;
+	display: block;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Input container */
+.editFormContainer{
+    margin: auto;
+	position: relative;
+	bottom: 0px;
+	background-color: orange;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+	padding-top: 30px;
+}
+
+/* Submit Edits Button */
+.submitEditsBtn{
+	height: 40px;
+	width: 150px;
+	margin-top: 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+    border: 2px solid darkorange;
+    cursor: pointer;
+    background-color: white;
+    font-family: 'Enriqueta', serif;
+}
+
+
+/* ------------------- Footer -------------------- */
+.footer{
+	background-color: rgba(153, 255,204,0.8);
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	padding-top: 2px;
+	color: white;
+	font-family: 'Enriqueta', serif;
+	position: fixed;
+	bottom: 0;
+}
+
+/* ----------------- Transitions --------------- */
+.fadeIn-appear{
+	opacity: 0.01;
+}
+
+.fadeIn-appear.fadeIn-appear-active{
+	opacity: 1;
+	transition: opacity 0.5s linear;
+}
+
+.grow-appear{
+	height: 0px;
+}
+
+.grow-appear.grow-appear-active{
+	height: 125px;
+	transition: height 0.5s ease-out;
+}
+
+.grow-leave.grow-leave-active{
+height: 0px;
+transition: height 0.5s linear;
+}
+
+.grow-leave{
+	height: 125px;
+}
+
+/* -------------------------- Media Queries --------------------- */
+@media only screen and (max-width: 640px){
+
+/* ------------- Add Recipe ------------ */
+.addRecipeTitle{
+	font-size: 40px;
+}
+
+.addRecipe-flex{
+	flex-direction: column-reverse;
+}
+
+/* container */
+.addRecipe-form{
+	height: 355px;
+	width: 400px;
+	margin: auto;
+}
+
+.choosePhoto-container{
+	width: 400px;
+	height: 325px;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+/* Insert Title Input */
+.addRecipe-form input{
+	display: block;
+	width: 90%;
+	height: 40px;
+	margin-top: 20px;
+}
+
+/* Insert Ingrediants Textarea */
+.addRecipe-form textArea{
+	width: 90%;
+	height: 100px;
+}
+
+.displayImage{
+	height: 200px;
+	width: 250px;
+}
+
+.choosePhotoBtn{
+	height: 30px;
+	width: 120px;
+	position: relative;
+	top: 35px;
+}
+
+/* ------------- Ingrediants ----------- */
+
+/* Main Container */
+.ingredients-container{
+	min-height: 350px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+}
+
+.deleteBtn, .editBtn{
+	height: 40px;
+	width: 130px;
+	color: white;
+	font-family: 'Enriqueta', serif;
+}
+
+
+
+}
+
+@media only screen and (min-width: 640px) and (max-width: 897px){
+/* ------------- Add Recipe ------------- */
+.addRecipeTitle{
+	font-size: 50px;
+}
+
+/* container */
+.addRecipe-form {
+	width: 350px;
+}
+
+.choosePhoto-container{
+	width: 300px;	
+}
+
+/* Insert Title Input */
+.addRecipe-form input{
+	width: 90%;
+	height: 50px;
+	margin-top: 50px;
+}
+
+/* Insert Ingrediants Textarea */
+.addRecipe-form textArea{
+	width: 90%;
+	height: 150px;
+}
+
+.displayImage{
+	height: 200px;
+	width: 250px;
+}
+
+.choosePhotoBtn{
+	height: 40px;
+	width: 140px;
+	position: relative;
+	top: 35px;
+}
+
+/* -------- Ingredients ---------- */
+.ingredients-container{
+	min-height: 350px;
+	width: 650px;
+}
+
+	}
+
+
+/* Screen Over 897px */
+@media only screen and (min-width: 897px){
+
+/* ----------- Add Recipe --------- */
+.addRecipeTitle{
+	font-size: 50px;
+}
+
+/* container */
+.addRecipe-form {
+	width: 450px;
+}
+
+.choosePhoto-container{
+	width: 400px;	
+}
+
+.displayImage{
+	width: 300px;
+	height: 250px;
+}
+
+/* Insert Title Input */
+.addRecipe-form input{
+	width: 90%;
+	height: 50px;
+	margin-top: 50px;
+}
+
+/* Insert Ingrediants Textarea */
+.addRecipe-form textArea{
+	width: 90%;
+	height: 150px;
+}
+
+.choosePhotoBtn{
+	height: 40px;
+	width: 140px;
+	position: relative;
+	top: 35px;
+}
+
+/* --------- Ingredients -------- */
+.ingredients-container{
+	min-height: 350px;
+	width: 850px;
+}
+	}
+
